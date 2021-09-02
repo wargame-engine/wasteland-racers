@@ -1,0 +1,86 @@
+{
+    "reportUrl": "https://github.com/wargame-engine/wasteland-racers/issues",
+    "author": "guitarninja#5707",
+    "factions": {
+        "scavengers": {
+            "version": "1.0",
+            "name": "Scavengers",
+            "id": "scavengers",
+            "url": "scavengers.json",
+            "color": "#585C75",
+            "description": "Experts at scavenging and looting."
+        }
+    },
+    "categories": {
+        "command": {"name": "Command"},
+        "core": {"name": "Core"},
+        "specialist": {"name": "Specialist"},
+        "strike": {"name": "Strike"},
+        "heavy": {"name": "Heavy"},
+        "fortification": {"name": "Fortification"}
+    },
+    "organizations": {
+        "skirmish": {
+            "name": "Generalist",
+            "cost": 0,
+            "description": "A well-rounded force for taking on any mission.",
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"min": 2, "max": 8}, "specialist": {"max": 5}, "strike": {"max": 5}, "heavy": {"max": 3}, "fortification": {"max": 4}}
+        },
+        "strike": {
+            "name": "Strike",
+            "cost": 1,
+            "description": "A strike force for outflanking or shock assaulting.",
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"max": 5}, "specialist": {"max": 5}, "strike": {"min": 2, "max": 8}, "heavy": {"max": 3}, "fortification": {"max": 4}}
+        },
+        "specialist": {
+            "name": "Specialist",
+            "cost": 1,
+            "description": "An elite force to deal with specific targets.",
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"max": 5}, "specialist": {"min": 2, "max": 8}, "strike": {"max": 5}, "heavy": {"max": 3}, "fortification": {"max": 4}}
+        },
+        "heavy": {
+            "name": "Heavy",
+            "cost": 1,
+            "description": "A heavy force to pack a punch on the field.",
+            "categories": {"command": {"min": 1, "max": 2}, "core": {"max": 5}, "specialist": {"max": 5}, "strike": {"max": 5}, "heavy": {"min": 2, "max": 5}, "fortification": {"max": 4}}
+        },
+        "support": {
+            "name": "Support",
+            "cost": 1,
+            "description": "A small supporting force.",
+            "categories": {"command": {"max": 1}, "core": {"max": 2}, "specialist": {"max": 2}, "strike": {"max": 2}, "heavy": {"max": 1}, "fortification": {"max": 4}}
+        }
+    },
+    "relics": {
+        "inspired": {
+            "name": "Inspired",
+            "rule": "legend_courage",
+            "description": "Upgrade one Leader model with Inspired.",
+            "flavor": "This model inspires the best in those who serve them.",
+            "points": 5
+        },
+        "expert_fighter": {
+            "name": "Expert Fighter",
+            "rule": "legend_expert_fighter",
+            "description": "Upgrade one Leader model with Expert Fighter.",
+            "flavor": "This model has fought in many close quarters fights and survived.",
+            "points": 5
+        },
+        "quick_reflexes": {
+            "name": "Quick Reflexes",
+            "rule": "legend_quick_reflexes",
+            "description": "Upgrade one Leader model with Quick Reflexes.",
+            "flavor": "This model has expert awareness and can react quickly.",
+            "points": 5
+        }
+    },
+    "weapons": {
+        "pistol": {"name": "Pistol", "short": 6, "attacks": 1, "rules": ["pistol"]},
+        "assault_pistol": {"name": "Assault Pistol", "short": 6, "attacks": 2, "rules": ["assault", "pistol"]},
+        "rifle": {"name": "Rifle", "short": 12, "medium": 24, "attacks": 1}
+    },
+    "rules": {
+        "half_tracked": {"name": "Half-Tracked", "description": "This unit may ignore difficult terrain when moving.", "points": 5},
+        "tracked": {"name": "Tracked", "description": "This unit may ignore difficult terrain and low obstacles when moving.", "points": 10}
+    }
+}
